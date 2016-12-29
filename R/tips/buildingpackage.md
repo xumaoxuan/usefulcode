@@ -1,12 +1,12 @@
-##1.RStudio
+##1.使用RStudio制作包
 制作RStudio，直接用R步骤繁琐，使用RStudio-"New Project"，把R函数文件放到R文件夹下，点击"Build & Reload"是在本机测试，点击"More-Build Source/Binary Package"就是生成包了
-##2.Roxygen函数注释
+##2.使用Roxygen函数注释
 点击"Configure Build Tools"，可以选择使用Roxygen生成文档说明书，也就是CRAN上看到的那种函数说明书，如果需要完整的一个PDF说明文档，可以使用
     path <- find.package(pack)
     system(paste(shQuote(file.path(R.home("bin"), "R")),
     "CMD", "Rd2pdf", shQuote(path)))
 将光标放到函数里，点击"Insert Roxygen Skeleton"，会自动插入一些注释关键字，输入@，可以看到完整的关键字信息
-##3.面向对象
+##3.关于面向对象
 何时使用R的面向对象编程呢：
 比如你要对每个种植物画不同的图形，不同的图形有特定的配色，这个时候就需要用到面向对象，比如写plot.orchid（兰花）函数，专门绘制兰花的图形。
 
