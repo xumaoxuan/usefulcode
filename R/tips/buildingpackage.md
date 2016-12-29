@@ -19,7 +19,8 @@ S3编程很简单，步骤如下：
 虽然Google推荐使用S4编程，但SS3使用起来显然更加快速方便，如果不是要写类似于神经网络那种含有大量对象且有复杂关系的包，建议使用S3。
 S4编程时，不要让用户操作new()，应该把new()用函数封装起来，让用户直接调用一个可用的函数，可以注意一下很多包里的"ZZZ.R"
 ##4.依赖包
-你包里的函数可能用了其他包的函数，如果在函数里面使用"library()"，一是管理起来不方便，二是会造成重复引用，代码不简洁，应该在DESCRIPTION里写，其中Depends的包是在library你的包的时候自动加载，Imports包是用到"::, @import, or @importFrom"的时候自动调用。
+你包里的函数可能用了其他包的函数，如果在函数里面使用"library()"，一是管理起来不方便，二是会造成重复引用，代码不简洁，应该在DESCRIPTION里写，其中Depends的包是在library你的包的时候自动加载，Imports包是用到"::, @import, or @importFrom"的时候自动调用。(
+Depends是先Load再Attach，Imports是只Load不Attach)
 安装包的时候，如果选择dependencies=TRUE，可以自动安装依赖的包，需要注意的是，你在此处最好了解下关于"本地repos"的知识。
 ##5.tips
  - 如果你想在library时自动运行一些东西，可以使用.onAttach和.onLoad函数，相应的，还有.unAttach和.unLoad
