@@ -19,7 +19,7 @@ S4编程时，不要让用户操作new()，应该把new()用函数封装起来�
 你包里的函数可能用了其他包的函数，如果在函数里面使用"library()"，一是管理起来不方便，二是会造成重复引用，代码不简洁，应该在DESCRIPTION里写，其中Depends的包是在library你的包的时候自动加载，Imports包是用到"::, @import, or @importFrom"的时候自动调用。
 安装包的时候，如果选择dependencies=TRUE，可以自动安装依赖的包，需要注意的是，你在此处最好了解下关于"本地repos"的知识。
 ##5.tips
-如果你想在library时自动运行一些东西，可以使用.onAttach和.onLoad函数，相应的，还有.unAttach和.unLoad
-函数返回对象时，如果后面还要调用这个对象做其他事情，最好先赋一下class和attr的信息再返回
-给函数起一个好用的名字，封装(wrapper)你的函数
-使用git管理你的每一次包的更新
+ - 如果你想在library时自动运行一些东西，可以使用.onAttach和.onLoad函数，相应的，还有.unAttach和.unLoad
+ - 函数返回对象时，如果后面还要调用这个对象做其他事情，最好先赋一下class和attr的信息再返回
+ - 给函数起一个好用的名字，封装(wrapper)你的函数
+ - 使用git管理你的每一次包的更新
