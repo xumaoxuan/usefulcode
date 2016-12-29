@@ -1,4 +1,4 @@
-#is used for solving local R packages management,especially in local area network(office place)
+#used for solving local R packages management,especially in local area network(office place)
 library(miniCRAN)
 cran <- c(CRAN="https://cran.rstudio.org") #设置一个源
 pkgs <- c("RODBC")#初始化时可以先直接下载一批包
