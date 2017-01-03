@@ -27,3 +27,4 @@ Depends是先Load再Attach，Imports是只Load不Attach)
  - 函数返回对象时，如果后面还要调用这个对象做其他事情，最好先赋一下class和attr的信息再返回
  - 给函数起一个好用的名字，封装(wrapper)你的函数
  - 使用git管理你的每一次包的更新
+ - 使用list(...)获得通过3个dot传进来的参数
