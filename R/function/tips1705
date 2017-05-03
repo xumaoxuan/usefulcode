@@ -1,0 +1,1 @@
+ min(which(grepl("^01-01",dt$time)==TRUE)) #to find which row startswhith specify characters
